@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+import ProjectList from '../components/ProjectList.astro';
+import PostList from '../components/PostList.astro';
+import profile from '../data/profile.json';
+import { siteConfig } from '../../site.config.mjs';
+import { getCollection } from 'astro:content';
+import { link } from '../lib/links';
+const posts = (await getCollection('posts', ({ data }) => import.meta.env.DEV || !data.draft)).sort((a,b) => b.data.date.valueOf() - a.data.date.valueOf()).slice(0,3);
+---
+<Base title="About">
+  <section class:list={['profile', { 'has-photo': !!profile.photo }]}>
+    <div><p class="eyebrow">{profile.role}</p><h1>{profile.name}</h1><p class="lead">{profile.introduction}</p>
+      {profile.about.map(paragraph => <p>{paragraph}</p>)}
+      <div class="links"><a href={link('cv/')}>CV</a><a href={`https://github.com/${siteConfig.githubUsername}`}>GitHub</a>{profile.email && <a href={`mailto:${profile.email}`}>Email</a>}</div>
+    </div>
+    {profile.photo && <img class="portrait" src={link(profile.photo)} alt={profile.name} width="220" height="260" />}
+  </section>
+  <section><h2>Research interests</h2><div class="tags interests">{profile.interests.map(interest => <span>{interest}</span>)}</div></section>
+  <section><div class="section-title"><h2>Selected projects</h2><a href={link('projects/')}>All projects</a></div><ProjectList /></section>
+  <section><div class="section-title"><h2>Recent writing</h2><a href={link('blog/')}>All writing</a></div><PostList posts={posts} /></section>
+</Base>

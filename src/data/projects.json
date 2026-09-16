@@ -1,0 +1,25 @@
+[
+  {
+    "title": "BeTraVL",
+    "category": "Off-road perception",
+    "period": "2025\u20132026",
+    "description": "Off-road BEV traversability estimation with offline vision-language supervision. Exploring the gap between where a vehicle has driven and where it could drive.",
+    "tags": [
+      "LiDAR",
+      "BEV",
+      "Vision-language models"
+    ],
+    "links": []
+  },
+  {
+    "title": "3D Scene Reconstruction Lab",
+    "category": "Computer vision",
+    "period": "2026",
+    "description": "A hands-on study of camera geometry, epipolar geometry, and two-view reconstruction, connecting mathematical concepts to working implementations.",
+    "tags": [
+      "Multi-view geometry",
+      "3D reconstruction"
+    ],
+    "links": []
+  }
+]

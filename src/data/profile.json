@@ -1,0 +1,123 @@
+{
+  "name": "Taewoo Lee",
+  "role": "Research Officer for National Defense",
+  "email": "twlee@add.re.kr",
+  "photo": "images/profile.jpeg",
+  "cvPdf": "",
+  "introduction": "I am a Research Officer for National Defense at the Defense AI R&D Institute, Agency for Defense Development (ADD), Korea. My research focuses on perception for off-road autonomous navigation.",
+  "about": [
+    "I research off-road traversability estimation and semantic segmentation, with interests in 3D scene understanding and multimodal LiDAR–vision–language perception.",
+    "My work includes LiDAR reflectivity image-based object detection and vision-language model-based traversability estimation. I also write about AI trends, AI transformation (AX), and my research and study notes."
+  ],
+  "interests": [
+    "3D Vision and Scene Understanding",
+    "Off-road Traversability Estimation",
+    "Multimodal / LiDAR-Vision-Language Perception",
+    "Semantic Segmentation and Foundation Model Supervision",
+    "Robot Perception for Autonomous Driving"
+  ],
+  "experience": [
+    {
+      "title": "Research Officer for National Defense",
+      "organization": "Defense AI R&D Institute, Agency for Defense Development, Korea",
+      "period": "Jun. 2024 – Present",
+      "description": "Research on traversability estimation and semantic segmentation for off-road environments."
+    }
+  ],
+  "education": [
+    {
+      "title": "B.E. in Electronics Engineering; B.E. in Computer Science and Engineering",
+      "organization": "Daegu Gyeongbuk Institute of Science and Technology (DGIST)",
+      "period": "Feb. 2020 – Feb. 2024",
+      "description": "Thesis: Development and Control of an Exoskeleton Robot Using Electromyography (EMG) Signals",
+      "details": [
+        "GPA: 3.79 / 4.3",
+        "Cum Laude"
+      ]
+    }
+  ],
+  "workExperience": [
+    {
+      "title": "Object Detection in Adverse Environmental Conditions",
+      "organization": "Defense AI R&D Institute, Agency for Defense Development, Korea",
+      "period": "Oct. 2024 – Aug. 2025",
+      "description": "Research on LiDAR reflectivity image-based object detection for high-speed off-road navigation."
+    },
+    {
+      "title": "VLM-Based Traversability Estimation for Off-Road Navigation",
+      "organization": "Defense AI R&D Institute, Agency for Defense Development, Korea",
+      "period": "Dec. 2025 – Present",
+      "description": "Research on vision-language model-based traversability estimation for off-road environments."
+    }
+  ],
+  "manuscripts": [
+    {
+      "title": "BeTraVL: Off-Road BEV Traversability Estimation with Vision-Language Supervision",
+      "authors": "Taewoo Lee et al.",
+      "status": ""
+    }
+  ],
+  "conferences": [
+    {
+      "title": "LiDAR-Based Object Detection Using YOLOX Model",
+      "authors": "Taewoo Lee, Jongwoo Lee",
+      "venue": "The 20th Korea Robotics Society Annual Conference (KRoC 2025)",
+      "location": "Pyeongchang, Korea",
+      "date": "Feb. 2025",
+      "type": "Poster"
+    },
+    {
+      "title": "Enhancing Object Detection Performance with LiDAR Image-Based YOLOX",
+      "authors": "Taewoo Lee",
+      "venue": "Korea Institute of Military Science and Technology",
+      "location": "Jeju, Korea",
+      "date": "Jun. 2025",
+      "type": "Poster"
+    },
+    {
+      "title": "VLM-Compatible LiDAR Representation for Off-Road Scene Understanding",
+      "authors": "Taewoo Lee",
+      "venue": "Korea Institute of Military Science and Technology",
+      "location": "Jeju, Korea",
+      "date": "Jun. 2026",
+      "type": "Poster"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Programming languages",
+      "items": [
+        "Python",
+        "C",
+        "C++"
+      ]
+    },
+    {
+      "category": "Technologies",
+      "items": [
+        "PyTorch",
+        "YOLOX",
+        "LiDAR Processing",
+        "Parameter-Efficient Fine-Tuning"
+      ]
+    },
+    {
+      "category": "Tools",
+      "items": [
+        "Docker",
+        "Linux",
+        "Git",
+        "OpenCV",
+        "ROS2"
+      ]
+    },
+    {
+      "category": "Datasets",
+      "items": [
+        "RELLIS-3D",
+        "KITTI",
+        "nuScenes"
+      ]
+    }
+  ]
+}

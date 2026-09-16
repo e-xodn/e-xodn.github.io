@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import profile from '../data/profile.json';
+import { link } from '../lib/links';
+type Entry = { title: string; organization?: string; period?: string; description?: string; details?: string[] };
+const groups: {title: string; items: Entry[]}[] = [
+  {title: 'Education', items: profile.education ?? []},
+  {title: 'Research experience', items: profile.experience ?? []},
+  {title: 'Work experience', items: profile.workExperience ?? []},
+];
+const manuscripts = profile.manuscripts ?? [];
+const conferences = profile.conferences ?? [];
+const skills = (profile.skills ?? []).filter(group => group.items.length > 0);
+---
+<Base title="CV"><p class="eyebrow">Curriculum vitae</p><h1>{profile.name}</h1><p class="lead">{profile.role}</p>
+<div class="links">
+{profile.email && <a href={`mailto:${profile.email}`}>{profile.email}</a>}
+{profile.cvPdf && <a href={link(profile.cvPdf)}>Download CV (PDF)</a>}
+</div>
+{groups.filter(group => group.items.length > 0).map(group => <section style="margin-top: 46px"><h2>{group.title}</h2>{group.items.map(item => <div class="cv-item"><h3>{item.title}</h3>{(item.organization || item.period) && <p class="muted">{[item.organization,item.period].filter(Boolean).join(' · ')}</p>}{item.description && <p>{item.description}</p>}{item.details?.length && <ul>{item.details.map(detail => <li>{detail}</li>)}</ul>}</div>)}</section>)}
+{profile.interests?.length > 0 && <section><h2>Research interests</h2><div class="tags">{profile.interests.map(interest => <span>{interest}</span>)}</div></section>}
+{manuscripts.length > 0 && <section><h2>Manuscripts</h2>{manuscripts.map(item => <div class="cv-item"><h3>{item.title}</h3><p>{item.authors}</p>{item.status && <p class="muted">{item.status}</p>}</div>)}</section>}
+{conferences.length > 0 && <section><h2>Conference presentations</h2>{conferences.map(item => <div class="cv-item"><h3>{item.title}</h3><p>{item.authors}</p><p class="muted">{[item.venue,item.location,item.date,item.type].filter(Boolean).join(' · ')}</p></div>)}</section>}
+{skills.length > 0 && <section><h2>Skills and techniques</h2>{skills.map(group => <div class="cv-item"><h3>{group.category}</h3><div class="tags">{group.items.map(item => <span>{item}</span>)}</div></div>)}</section>}
+</Base>

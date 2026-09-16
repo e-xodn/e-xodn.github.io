@@ -1,0 +1,21 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { link, formatDate } from '../../lib/links';
+export async function getStaticPaths() {
+  const posts = await getCollection('posts', ({ data }) => import.meta.env.DEV || !data.draft);
+  return posts.map(post => ({ params: { id: post.id }, props: { post } }));
+}
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+<Base title={post.data.title} description={post.data.description} lang={post.data.lang}>
+  <a class="back" href={link('blog/')}>← All writing</a>
+  <article class="article">
+    <p class="eyebrow">{post.data.category} · <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time></p>
+    <h1>{post.data.title}</h1>
+    {post.data.draft && <p class="draft-banner">Draft — visible in local development only.</p>}
+    <p class="lead">{post.data.description}</p>
+    <div class="prose"><Content /></div>
+  </article>
+</Base>
