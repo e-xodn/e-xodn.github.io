@@ -12,7 +12,7 @@ const posts = (await getCollection('posts', ({ data }) => import.meta.env.DEV ||
   <section class:list={['profile', { 'has-photo': !!profile.photo }]}>
     <div><p class="eyebrow">{profile.role}</p><h1>{profile.name}</h1><p class="lead">{profile.introduction}</p>
       {profile.about.map(paragraph => <p>{paragraph}</p>)}
-      <div class="links"><a href={link('cv/')}>CV</a><a href={`https://github.com/${siteConfig.githubUsername}`}>GitHub</a>{profile.email && <a href={`mailto:${profile.email}`}>Email</a>}</div>
+      <div class="links"><a href={`https://github.com/${siteConfig.githubUsername}`}>GitHub</a>{profile.email && <a href={`mailto:${profile.email}`}>Email</a>}</div>
     </div>
     {profile.photo && <img class="portrait" src={link(profile.photo)} alt={profile.name} width="220" height="260" />}
   </section>

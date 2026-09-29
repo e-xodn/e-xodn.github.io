@@ -6,7 +6,7 @@ import { link } from '../lib/links';
 interface Props { title: string; description?: string; lang?: string; }
 const { title, description = profile.introduction, lang = 'en' } = Astro.props;
 const path = Astro.url.pathname;
-const nav = [['About', ''], ['Projects', 'projects/'], ['Writing', 'blog/'], ['CV', 'cv/']];
+const nav = [['About', ''], ['Projects', 'projects/'], ['Writing', 'blog/']];
 const canonical = new URL(path, Astro.site);
 ---
 <!doctype html>
