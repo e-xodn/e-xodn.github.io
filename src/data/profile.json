@@ -1,11 +1,11 @@
 {
   "name": "Taewoo Lee",
   "role": "Research Officer for National Defense",
-  "email": "twlee@add.re.kr",
+  "email": "leetw0432@gmail.com",
   "photo": "images/profile.jpeg",
   "cvPdf": "",
-  "introduction": "I am a Research Officer for National Defense at the Defense AI R&D Institute, Agency for Defense Development (ADD), Korea. My research focuses on perception for off-road autonomous navigation.",
-  "about": [
+  "introduction": "I am a Research Officer for National Defense at the Agency for Defense Development (ADD). My research focuses on perception for off-road autonomous navigation.",
+  "about": [ 
     "I research off-road traversability estimation and semantic segmentation, with interests in 3D scene understanding and multimodal LiDAR–vision–language perception.",
     "My work includes LiDAR reflectivity image-based object detection and vision-language model-based traversability estimation. I also write about AI trends, AI transformation (AX), and my research and study notes."
   ],
@@ -31,7 +31,6 @@
       "period": "Feb. 2020 – Feb. 2024",
       "description": "Thesis: Development and Control of an Exoskeleton Robot Using Electromyography (EMG) Signals",
       "details": [
-        "GPA: 3.79 / 4.3",
         "Cum Laude"
       ]
     }
@@ -116,7 +115,8 @@
       "items": [
         "RELLIS-3D",
         "KITTI",
-        "nuScenes"
+        "nuScenes",
+        "STONE"
       ]
     }
   ]

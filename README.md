@@ -87,7 +87,7 @@ Drafts appear during `npm run dev` with a visible draft label. `npm run build` e
 
 Draft exclusion does not hide Markdown source in a public GitHub repository. Keep genuinely private writing outside a public repository.
 
-`first-post.md` is a local-only editing example, not an authored article. Replace it or delete it after you have another post file.
+`-post.md` is a local-only editing example, not an authored article. Replace it or delete it after you have another post file.
 
 ## 4. Check before publishing
 

@@ -6,7 +6,7 @@ const posts = defineCollection({
     title: z.string(),
     description: z.string(),
     date: z.coerce.date(),
-    category: z.enum(['AI Trends', 'AX', 'Insights', 'Study Notes']),
+    category: z.enum(['AI Trends', 'AX', 'Insights', 'Study Notes', 'ChatDAY']),
     lang: z.enum(['en', 'ko']).default('en'),
     draft: z.boolean().default(true),
   }),
