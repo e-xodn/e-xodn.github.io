@@ -1,7 +1,7 @@
 ---
 title: "AI 시대, 기업은 어떤 사람을 원하는가?"
 description: "AI를 쓰는 일이 당연해진다면, 신입 지원자는 무엇으로 차이를 만들 수 있을까."
-date: 2026-09-29
+date: 2026-10-04
 category: "AI Trends"
 lang: "ko"
 draft: false
